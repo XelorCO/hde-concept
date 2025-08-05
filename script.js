@@ -24,11 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.main-nav a');
 
     const toggleNav = () => {
-        const isVisible = mainNav.getAttribute('data-visible') === 'true';
-        mainNav.setAttribute('data-visible', !isVisible);
-        mobileNavToggle.setAttribute('aria-expanded', !isVisible);
-        document.body.classList.toggle('nav-open');
-    };
+    const isVisible = mainNav.getAttribute('data-visible') === 'true';
+    mainNav.setAttribute('data-visible', !isVisible);
+    mobileNavToggle.setAttribute('aria-expanded', !isVisible);
+    document.body.classList.toggle('nav-open');
+
+    // Ajoute ou retire la classe mobile-open sur le header
+    header.classList.toggle('mobile-open', !isVisible);
+};
+
 
     mobileNavToggle.addEventListener('click', toggleNav);
     navLinks.forEach(link => {
