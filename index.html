@@ -14,20 +14,22 @@
 
   <header class="header">
     <a class="header-logo" href="#">
-        <img src="logo.jpg" alt="Logo Home Design Elec">
+      <img src="logo.jpg" alt="Logo HDE Concept">
     </a>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+
+    <nav class="main-nav" data-visible="false" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#devis">Contact</a></li>
+      </ul>
     </nav>
-    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-        <span class="icon-hamburger"></span>
-        <span class="icon-close"></span>
-        <span class="sr-only">Menu</span>
+
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu">
+      <span class="icon-hamburger"></span>
+      <span class="icon-close"></span>
+      <span class="sr-only">Menu</span>
     </button>
   </header>
 
@@ -49,9 +51,9 @@
 
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1 class="fade-in-element">L'électricité, le design en plus.</h1>
+        <h1 class="fade-in-element"><span class="highlight-gray">L'électricité</span>, le design en plus.</h1>
         <p class="fade-in-element">Solutions électriques innovantes qui subliment votre intérieur.</p>
-        <br> 
+        <br>
         <a href="#devis" class="cta-button fade-in-element">Obtenir mon devis</a>
       </div>
     </section>
@@ -79,70 +81,117 @@
 
     <section id="realisations" class="content-section bg-light">
       <h2 class="fade-in-element">Nos Réalisations</h2>
+
       <div class="realisations-container">
         <div class="realisation-card fade-in-element">
           <h3>Éclairage & Ambiance</h3>
-          <div class="realisation-images">
-            <img src="4.jpeg" alt="Ambiance lumineuse 1">
-            <img src="5.jpeg" alt="Ambiance lumineuse 2">
-            <img src="6.jpeg" alt="Ambiance lumineuse 3">
+          <div class="rail-wrap">
+            <button class="rail-btn rail-prev" aria-label="Précédent">&#10094;</button>
+            <div class="realisation-images" data-gallery="ambiance">
+              <img src="4.jpeg" alt="Ambiance lumineuse 1">
+              <img src="5.jpeg" alt="Ambiance lumineuse 2">
+              <img src="6.jpeg" alt="Ambiance lumineuse 3">
+            </div>
+            <button class="rail-btn rail-next" aria-label="Suivant">&#10095;</button>
           </div>
         </div>
+
         <div class="realisation-card fade-in-element">
           <h3>Installations Techniques</h3>
-          <div class="realisation-images">
-            <img src="7.jpeg" alt="Installation technique 1">
-            <img src="8.jpg" alt="Installation technique 2">
-            <img src="9.jpeg" alt="Installation technique 3">
+          <div class="rail-wrap">
+            <button class="rail-btn rail-prev" aria-label="Précédent">&#10094;</button>
+            <div class="realisation-images" data-gallery="technique">
+              <img src="7.jpeg" alt="Installation technique 1">
+              <img src="8.jpg" alt="Installation technique 2">
+              <img src="9.jpeg" alt="Installation technique 3">
+            </div>
+            <button class="rail-btn rail-next" aria-label="Suivant">&#10095;</button>
           </div>
         </div>
+
         <div class="realisation-card fade-in-element">
           <h3>Design & Finitions</h3>
-          <div class="realisation-images">
-            <img src="13.jpg" alt="Finition design 1">
-            <img src="11.jpeg" alt="Finition design 2">
-            <img src="12.jpeg" alt="Finition design 3">
+          <div class="rail-wrap">
+            <button class="rail-btn rail-prev" aria-label="Précédent">&#10094;</button>
+            <div class="realisation-images" data-gallery="finitions">
+              <img src="13.jpg" alt="Finition design 1">
+              <img src="11.jpeg" alt="Finition design 2">
+              <img src="12.jpeg" alt="Finition design 3">
+            </div>
+            <button class="rail-btn rail-next" aria-label="Suivant">&#10095;</button>
           </div>
         </div>
       </div>
     </section>
 
     <section id="devis" class="content-section contact-section">
-        <h2 class="fade-in-element">Un projet ? Parlons-en.</h2>
-        <div class="contact-wrapper fade-in-element">
-            <div class="contact-info">
-                <img src="logo.jpg" alt="Logo HDE Concept" class="contact-logo">
-                <h3>Informations</h3>
-                <p><strong>Adresse :</strong> Clos Jean Mermoz, 73290, La Motte Servolex</p>
-                <p><strong>Email :</strong> <a href="mailto:home.design.elec@gmail.com">home.design.elec@gmail.com</a></p>
-                <p><strong>Téléphone :</strong> <a href="tel:+33664525638">06 64 52 56 38</a></p>
-                <p>Disponible du Lundi au Vendredi, de 8h à 18h.</p>
-            </div>
-            <form id="contact-form" class="contact-form" action="https://formsubmit.co/home.design.elec@gmail.com" method="POST">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required placeholder="Votre Nom">
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" required placeholder="Votre Email">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" rows="5" required placeholder="Décrivez brièvement votre projet"></textarea>
-                </div>
-                <button type="submit" class="cta-button">Envoyer le message</button>
-            </form>
+      <h2 class="fade-in-element">Un projet ? <span class="highlight-gray">Parlons-en.</span></h2>
+
+      <div class="contact-wrapper fade-in-element">
+        <div class="contact-info">
+          <img src="logo.jpg" alt="Logo HDE Concept" class="contact-logo">
+          <h3>Informations</h3>
+
+          <ul class="contact-badges">
+            <li>
+              <span class="icon">📍</span>
+              <span>Clos Jean Mermoz, 73290 La Motte-Servolex</span>
+            </li>
+            <li>
+              <span class="icon">✉️</span>
+              <a href="mailto:home.design.elec@gmail.com">home.design.elec@gmail.com</a>
+            </li>
+            <li>
+              <span class="icon">📞</span>
+              <a href="tel:+33664525638">06 64 52 56 38</a>
+            </li>
+            <li>
+              <span class="icon">🕒</span>
+              <span>Lun → Ven, 8h–18h</span>
+            </li>
+          </ul>
         </div>
+
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/home.design.elec@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="name">Votre Nom</label>
+            <input type="text" id="name" name="name" required placeholder="Votre Nom">
+          </div>
+          <div class="form-group">
+            <label for="email">Votre Email</label>
+            <input type="email" id="email" name="email" required placeholder="Votre Email">
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Décrivez brièvement votre projet"></textarea>
+          </div>
+          <button type="submit" class="cta-button">Envoyer le message</button>
+        </form>
+      </div>
+
+      <div class="map-embed fade-in-element" aria-label="Carte d'accès">
+        <iframe
+          title="HDE Concept - Carte"
+          src="https://www.google.com/maps?q=Clos%20Jean%20Mermoz%2C%2073290%20La%20Motte-Servolex&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+        </iframe>
+      </div>
     </section>
   </main>
 
-  <div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-    <a class="lightbox-prev">&#10094;</a>
-    <a class="lightbox-next">&#10095;</a>
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Visionneuse d'images">
+    <span class="lightbox-close" aria-label="Fermer">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Aperçu de la réalisation">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+    <a class="lightbox-prev" aria-label="Image précédente">&#10094;</a>
+    <a class="lightbox-next" aria-label="Image suivante">&#10095;</a>
   </div>
 
   <footer class="footer">
-    <p>© 2025 HDE Concept - Tous droits réservés - Fait avec ♥ par Soft Pac</p>
+    <p>© 2025 HDE Concept - Tous droits réservés - Fait avec ♥ par
+      <a class="softpac" href="https://softpac.fr" target="_blank" rel="noopener">Soft Pac</a>
+    </p>
   </footer>
 
   <script src="script.js"></script>
